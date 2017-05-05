@@ -11,7 +11,9 @@ class SchoolsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(School::class)->create(['name'=>'Colégio Braz Lima Verde','nickname'=>'blv']);
-        factory(School::class,10)->create();
+        factory(School::class)->create(['name'=>'Cliente 1','nickname'=>'cli1']);
+        factory(School::class)->create(['name'=>'Cliente 2','nickname'=>'cli2']);
+        factory(School::class)->create(['name'=>'Cliente 3','nickname'=>'cli3']);
+        //factory(School::class,10)->create();
     }
 }

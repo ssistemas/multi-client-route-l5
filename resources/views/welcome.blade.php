@@ -89,6 +89,11 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+                <br> <br> <br>
+                @foreach (\App\School::all() as $cli)
+                <a href="{{ url($cli->nickname.'/home') }}" title="">{{$cli->name}}</a><br><br>
+                @endforeach
+
             </div>
         </div>
     </body>

@@ -1,7 +1,11 @@
 <?php
 config()->set(['url_prefix'=>Request::segment(1)]);
-$school = new \App\School();
-$school = $school->select('nickname')->where('nickname',config('url_prefix'))->get()->toArray();
+$school = null;
+if(!App::runningInConsole())
+{
+    $school = new \App\School();
+    $school = $school->select('nickname')->where('nickname',config('url_prefix'))->get()->toArray();
+}
 //dd($school);
 
 if(count($school))
